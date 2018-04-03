@@ -4,11 +4,14 @@ import com.vsocolov.leaguetable.data.LeagueTableEntry;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.Optional;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.sameInstance;
+import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.beans.HasPropertyWithValue.hasProperty;
 
 public class HashMapLeagueDataStorageTest {
 
@@ -48,5 +51,17 @@ public class HashMapLeagueDataStorageTest {
         final Optional<LeagueTableEntry> createdEntry = dataStorage.getTableEntry(entry.getTeamName());
         assertThat(createdEntry.isPresent(), is(true));
         assertThat(createdEntry.get(), sameInstance(entry));
+    }
+
+    @Test
+    public void listTableEntries_should_return_all_entries_in_storage() {
+        //insert two entries in storage
+        dataStorage.saveTableEntry(new LeagueTableEntry("Arsenal"));
+        dataStorage.saveTableEntry(new LeagueTableEntry("Chelsea"));
+
+        final List<LeagueTableEntry> entries = dataStorage.listTableEntries();
+        assertThat(entries, hasSize(2));
+        assertThat(entries, hasItem(hasProperty("teamName", equalTo("Arsenal"))));
+        assertThat(entries, hasItem(hasProperty("teamName", equalTo("Chelsea"))));
     }
 }
