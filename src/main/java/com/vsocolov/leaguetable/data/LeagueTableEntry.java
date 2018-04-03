@@ -11,6 +11,10 @@ public class LeagueTableEntry {
     private int goalDifference;
     private int points;
 
+    public LeagueTableEntry(final String teamName) {
+        this.teamName = teamName;
+    }
+
     public LeagueTableEntry(final String teamName, final int played, final int won, final int drawn,
                             final int lost, final int goalsFor, final int goalsAgainst, final int goalDifference,
                             final int points) {
