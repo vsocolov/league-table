@@ -1,4 +1,4 @@
-package com.vsocolov.leaguetable;
+package com.vsocolov.leaguetable.data;
 
 public class Match {
   private String homeTeam;

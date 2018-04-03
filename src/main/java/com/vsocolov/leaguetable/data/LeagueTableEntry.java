@@ -11,7 +11,9 @@ public class LeagueTableEntry {
   private int goalDifference;
   private int points;
 
-  public LeagueTableEntry(String teamName, int played, int won, int drawn, int lost, int goalsFor, int goalsAgainst, int goalDifference, int points) {
+  public LeagueTableEntry(final String teamName, final int played, final int won, final int drawn,
+                          final int lost, final int goalsFor, final int goalsAgainst, final int goalDifference,
+                          final int points) {
     this.teamName = teamName;
     this.played = played;
     this.won = won;
@@ -20,13 +22,14 @@ public class LeagueTableEntry {
     this.goalsFor = goalsFor;
     this.goalsAgainst = goalsAgainst;
     this.goalDifference = goalDifference;
+    this.points = points;
   }
 
   public String getTeamName() {
     return teamName;
   }
 
-  public void setTeamName(String teamName) {
+  public void setTeamName(final String teamName) {
     this.teamName = teamName;
   }
 
@@ -34,7 +37,7 @@ public class LeagueTableEntry {
     return played;
   }
 
-  public void setPlayed(int played) {
+  public void setPlayed(final int played) {
     this.played = played;
   }
 
@@ -42,7 +45,7 @@ public class LeagueTableEntry {
     return won;
   }
 
-  public void setWon(int won) {
+  public void setWon(final int won) {
     this.won = won;
   }
 
@@ -50,7 +53,7 @@ public class LeagueTableEntry {
     return drawn;
   }
 
-  public void setDrawn(int drawn) {
+  public void setDrawn(final int drawn) {
     this.drawn = drawn;
   }
 
@@ -58,7 +61,7 @@ public class LeagueTableEntry {
     return lost;
   }
 
-  public void setLost(int lost) {
+  public void setLost(final int lost) {
     this.lost = lost;
   }
 
@@ -66,7 +69,7 @@ public class LeagueTableEntry {
     return goalsFor;
   }
 
-  public void setGoalsFor(int goalsFor) {
+  public void setGoalsFor(final int goalsFor) {
     this.goalsFor = goalsFor;
   }
 
@@ -74,7 +77,7 @@ public class LeagueTableEntry {
     return goalsAgainst;
   }
 
-  public void setGoalsAgainst(int goalsAgainst) {
+  public void setGoalsAgainst(final int goalsAgainst) {
     this.goalsAgainst = goalsAgainst;
   }
 
@@ -82,7 +85,7 @@ public class LeagueTableEntry {
     return goalDifference;
   }
 
-  public void setGoalDifference(int goalDifference) {
+  public void setGoalDifference(final int goalDifference) {
     this.goalDifference = goalDifference;
   }
 
@@ -90,7 +93,7 @@ public class LeagueTableEntry {
     return points;
   }
 
-  public void setPoints(int points) {
+  public void setPoints(final int points) {
     this.points = points;
   }
 }

@@ -1,6 +1,7 @@
-package com.vsocolov.leaguetable.data;
+package com.vsocolov.leaguetable;
 
-import com.vsocolov.leaguetable.Match;
+import com.vsocolov.leaguetable.data.LeagueTableEntry;
+import com.vsocolov.leaguetable.data.Match;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.List;
