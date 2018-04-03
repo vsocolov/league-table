@@ -4,7 +4,7 @@ import com.vsocolov.leaguetable.data.LeagueTableEntry;
 
 public interface LeagueDataStorage {
 
-  LeagueTableEntry getTableEntry(String team);
+    LeagueTableEntry getTableEntry(String team);
 
-  void saveTableEntry(final LeagueTableEntry tableEntry);
+    void saveTableEntry(final LeagueTableEntry tableEntry);
 }

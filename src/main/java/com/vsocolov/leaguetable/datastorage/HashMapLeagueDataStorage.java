@@ -7,19 +7,19 @@ import java.util.Map;
 
 public class HashMapLeagueDataStorage implements LeagueDataStorage {
 
-  private final Map<String, LeagueTableEntry> dataStorage;
+    private final Map<String, LeagueTableEntry> dataStorage;
 
-  public HashMapLeagueDataStorage() {
-    dataStorage = new HashMap<>();
-  }
+    public HashMapLeagueDataStorage() {
+        dataStorage = new HashMap<>();
+    }
 
-  @Override
-  public LeagueTableEntry getTableEntry(final String team) {
-    return dataStorage.get(team);
-  }
+    @Override
+    public LeagueTableEntry getTableEntry(final String team) {
+        return dataStorage.get(team);
+    }
 
-  @Override
-  public void saveTableEntry(final LeagueTableEntry tableEntry) {
-    dataStorage.put(tableEntry.getTeamName(), tableEntry);
-  }
+    @Override
+    public void saveTableEntry(final LeagueTableEntry tableEntry) {
+        dataStorage.put(tableEntry.getTeamName(), tableEntry);
+    }
 }
