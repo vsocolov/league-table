@@ -9,7 +9,12 @@ import com.vsocolov.leaguetable.data.Match;
 import com.vsocolov.leaguetable.datastorage.HashMapLeagueDataStorage;
 import com.vsocolov.leaguetable.datastorage.LeagueDataStorage;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+
+import static java.util.Comparator.comparing;
+import static java.util.Comparator.comparingInt;
 
 public class LeagueTable {
 
@@ -26,7 +31,15 @@ public class LeagueTable {
      * @return
      */
     public List<LeagueTableEntry> getTableEntries() {
-        return leagueDataStorage.listTableEntries();
+        final List<LeagueTableEntry> entries = leagueDataStorage.listTableEntries();
+
+        // sort entries by points, goal diff, goals for and team names
+        entries.sort(comparingInt(LeagueTableEntry::getPoints).reversed()
+                .thenComparingInt(LeagueTableEntry::getGoalDifference).reversed()
+                .thenComparingInt(LeagueTableEntry::getGoalsFor).reversed()
+                .thenComparing(comparing(LeagueTableEntry::getTeamName)));
+
+        return entries;
     }
 
     private void processMatchInfo(final List<Match> matches) {

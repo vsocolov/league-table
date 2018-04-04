@@ -31,11 +31,11 @@ public class LeagueTableTest {
 
     private List<Match> matchesStub() {
         final Match match1 = new Match("Chelsea", "Arsenal", 3, 1);
-        final Match match2 = new Match("Chelsea", "Liverpool", 2, 3);
-        final Match match3 = new Match("Chelsea", "Manchester United", 0, 1);
+        final Match match2 = new Match("Chelsea", "Liverpool", 1, 2);
+        final Match match3 = new Match("Chelsea", "Manchester United", 0, 0);
         final Match match4 = new Match("Liverpool", "Arsenal", 4, 2);
-        final Match match5 = new Match("Liverpool", "Manchester United", 2, 2);
-        final Match match6 = new Match("Arsenal", "Manchester United", 1, 1);
+        final Match match5 = new Match("Liverpool", "Manchester United", 2, 1);
+        final Match match6 = new Match("Arsenal", "Manchester United", 2, 4);
 
         return Arrays.asList(match1, match2, match3, match4, match5, match6);
     }
