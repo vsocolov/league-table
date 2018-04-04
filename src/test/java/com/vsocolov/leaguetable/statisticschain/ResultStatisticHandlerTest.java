@@ -1,4 +1,4 @@
-package com.vsocolov.leaguetable.chain;
+package com.vsocolov.leaguetable.statisticschain;
 
 import com.vsocolov.leaguetable.data.LeagueTableEntry;
 import com.vsocolov.leaguetable.data.Match;
