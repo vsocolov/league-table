@@ -8,9 +8,9 @@ import java.util.function.BiConsumer;
 
 public abstract class StatisticHandler {
 
-    protected StatisticHandler nextHandler;
+    private StatisticHandler nextHandler;
 
-    protected final LeagueDataStorage leagueDataStorage;
+    private final LeagueDataStorage leagueDataStorage;
 
     protected StatisticHandler(final LeagueDataStorage leagueDataStorage) {
         this.leagueDataStorage = leagueDataStorage;
