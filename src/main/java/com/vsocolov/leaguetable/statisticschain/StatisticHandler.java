@@ -26,6 +26,7 @@ public abstract class StatisticHandler {
         final LeagueTableEntry awayTeamTableEntry = leagueDataStorage.getTableEntry(match.getAwayTeam())
                 .orElse(new LeagueTableEntry(match.getAwayTeam()));
 
+        // basic logic for specific chain
         handlerLogic.accept(homeTeamTableEntry, awayTeamTableEntry);
 
         leagueDataStorage.saveTableEntry(homeTeamTableEntry);

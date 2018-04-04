@@ -25,7 +25,7 @@ public class LeagueTable {
     }
 
     /**
-     * Get the ordered list of league table entries for this league table.
+     * Get the ordered list of league table entries.
      *
      * @return a sorted list of
      */
